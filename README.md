@@ -1,6 +1,6 @@
 # Cit-E Cycling Web Portal
 
-A PHP and MySQL web application built for the **CET138 Full Stack Development** assignment. This project provides a simple public-facing interest registration form and a secure admin area for managing cycling event participant data.
+A PHP and MySQL web application built for my **CET138 Full Stack Development** assignment. This project provides a simple public-facing interest registration form and a secure admin area for managing cycling event participant data.
 
 ## Project Introduction
 The **Cit-E Cycling Web Portal** is a dynamic data-driven website created for a cycling competition management scenario. The system allows users to register their interest for future events, while administrators can securely log in to search participant and club information, edit participant scores, delete participants, and log out safely. The project uses **PHP**, **MySQL**, **Bootstrap**, and custom CSS, and is designed to run locally using **XAMPP**.
