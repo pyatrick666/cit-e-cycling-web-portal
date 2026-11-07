@@ -1,110 +1,101 @@
 # Cit-E Cycling Web Portal
 
-A PHP and MySQL web application built for my **CET138 Full Stack Development** assignment. This project provides a simple public-facing interest registration form and a secure admin area for managing cycling event participant data.
+A PHP and MySQL web application developed for my **CET138 Full Stack Development** assignment. It provides a public interest-registration form and an administrator area for managing cycling participant records.
 
-## Project Introduction
-The **Cit-E Cycling Web Portal** is a dynamic data-driven website created for a cycling competition management scenario. The system allows users to register their interest for future events, while administrators can securely log in to search participant and club information, edit participant scores, delete participants, and log out safely. The project uses **PHP**, **MySQL**, **Bootstrap**, and custom CSS, and is designed to run locally using **XAMPP**.
+## Overview
+
+The portal supports a cycling-event scenario. Visitors can register their interest in future events, while an administrator can log in to search participant and club information and manage participant performance records.
 
 ## Features
-- Register interest for future cycling events
-- Save interest form data into the database
-- Secure admin login and logout
+
+- Public interest-registration form
+- Store registration details in MySQL
+- Administrator login and logout
 - Search participants by first name or surname
 - Search clubs by club name
 - Display club totals and averages for distance and power output
-- Edit participant power output and distance
-- Delete participants with confirmation
-- Bootstrap-based responsive design
-- Custom hover styling for cards and buttons
+- Edit participant distance and power output
+- Delete participant records with confirmation
+- Responsive Bootstrap-based interface
+- Custom CSS styling
 
-## Technologies Used
+## Technology stack
+
 - PHP
 - MySQL
-- HTML5
-- CSS3
+- HTML5 and CSS3
 - Bootstrap 5
-- XAMPP
+- XAMPP for local development
 
-## Project Structure
-- `index.html` - Home page
-- `register_form.html` - Register interest form
-- `register.php` - Saves interest form data
-- `admin_login.html` - Admin login page
-- `login.php` - Authenticates admin login
-- `admin_menu.php` - Admin dashboard
-- `search_form.php` - Search form for participants and clubs
-- `search_result.php` - Displays participant and club search results
-- `view_participants_edit_delete.php` - Lists participants for editing or deletion
-- `edit_participant.php` - Updates participant scores
-- `delete.php` - Deletes participants after confirmation
-- `logout.php` - Logs admin out and redirects to home page
-- `dbconnect.php` - Database connection settings
-- `styles.css` - Custom styling
-- `cycling.sql` - Database structure and sample data
+## Project structure
 
-## Setup Instructions
-### 1. Install XAMPP
-Install XAMPP on Windows and start:
-- Apache
-- MySQL
+| File | Purpose |
+| --- | --- |
+| `index.html` | Home page |
+| `register_form.html` | Public interest form |
+| `register.php` | Saves interest form data |
+| `admin_login.html` | Administrator login page |
+| `login.php` | Processes administrator login |
+| `admin_menu.php` | Administrator menu |
+| `search_form.php` | Participant and club search form |
+| `search_result.php` | Displays search results |
+| `view_participants_edit_delete.php` | Participant management list |
+| `edit_participant.php` | Updates participant performance data |
+| `delete.php` | Deletes a participant after confirmation |
+| `logout.php` | Ends the administrator session |
+| `dbconnect.php` | Database connection configuration |
+| `styles.css` | Custom styles |
+| `cycling.sql` | Database schema and sample data |
 
-### 2. Place Project Files
-Copy the project folder into:
+## Run locally
+
+### 1. Install and start XAMPP
+
+Start **Apache** and **MySQL** from the XAMPP control panel.
+
+### 2. Copy the project
+
+Place the repository folder in your XAMPP web root, for example:
 
 ```text
 C:\xampp\htdocs\cycling
 ```
 
-### 3. Create the Database
-Open phpMyAdmin:
+### 3. Create and import the database
 
-```text
-http://localhost/phpmyadmin
-```
+1. Open [phpMyAdmin](http://localhost/phpmyadmin).
+2. Create a database named `cycling`.
+3. Select the database and import `cycling.sql`.
 
-Create a database named:
+### 4. Check the database connection
 
-```text
-cycling
-```
+Review `dbconnect.php` and update the local connection values to match your XAMPP setup. Do not use production credentials in a public repository.
 
-### 4. Import SQL File
-- Select the `cycling` database
-- Click `Import`
-- Choose `cycling.sql`
-- Click `Go`
+### 5. Open the portal
 
-### 5. Configure Database Connection
-Edit `dbconnect.php`:
-
-```php
-<?php
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "cycling";
-?>
-```
-
-### 6. Run the Project
-Open in browser:
+Visit:
 
 ```text
 http://localhost/cycling/
 ```
 
-## Admin Login
-Use the default admin credentials from the database:
+## Demo administrator account
+
+The repository's sample database documents a default demo login:
 
 ```text
 Username: admin
 Password: password123
 ```
 
-## Notes
-- The database structure was kept unchanged to match the provided SQL file.
-- The `interest` table stores only firstname, surname, email, and terms acceptance.
-- For now, this project was only developed to meet assignment requirements but also i'll work on it in the future.
+Change or remove sample credentials before any public deployment. This coursework application should be security-reviewed before handling real participant information.
+
+## Scope and limitations
+
+- Built as a coursework project and local demonstration.
+- The included SQL file is the source of truth for the database structure.
+- The current implementation is not presented as a production-ready event-management service.
 
 ## Author
-Pratik Poudel aka Patrick
+
+**Pratik Poudel** · [GitHub](https://github.com/pyatrick666)
