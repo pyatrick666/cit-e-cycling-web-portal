@@ -49,52 +49,30 @@ The portal supports a cycling-event scenario. Visitors can register their intere
 
 ## Run locally
 
-### 1. Install and start XAMPP
+1. Install XAMPP and start **Apache** and **MySQL**.
+2. Place the repository folder in the web root, for example `C:\xampp\htdocs\cycling`.
+3. Open [phpMyAdmin](http://localhost/phpmyadmin), create a database named `cycling`, and import `cycling.sql`.
+4. Review `dbconnect.php` and update the local connection values.
+5. Visit `http://localhost/cycling/`.
 
-Start **Apache** and **MySQL** from the XAMPP control panel.
-
-### 2. Copy the project
-
-Place the repository folder in your XAMPP web root, for example:
-
-```text
-C:\xampp\htdocs\cycling
-```
-
-### 3. Create and import the database
-
-1. Open [phpMyAdmin](http://localhost/phpmyadmin).
-2. Create a database named `cycling`.
-3. Select the database and import `cycling.sql`.
-
-### 4. Check the database connection
-
-Review `dbconnect.php` and update the local connection values to match your XAMPP setup. Do not use production credentials in a public repository.
-
-### 5. Open the portal
-
-Visit:
-
-```text
-http://localhost/cycling/
-```
+Do not use production credentials in a public repository.
 
 ## Demo administrator account
 
-The repository's sample database documents a default demo login:
+The sample database documents this demo login:
 
 ```text
 Username: admin
 Password: password123
 ```
 
-Change or remove sample credentials before any public deployment. This coursework application should be security-reviewed before handling real participant information.
+Change or remove sample credentials before any public deployment. Security-review the coursework application before handling real participant information.
 
 ## Scope and limitations
 
 - Built as a coursework project and local demonstration.
 - The included SQL file is the source of truth for the database structure.
-- The current implementation is not presented as a production-ready event-management service.
+- Not presented as a production-ready event-management service.
 
 ## Author
 
